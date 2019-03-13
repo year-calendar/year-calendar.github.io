@@ -6,3 +6,57 @@
 .project-name {
     margin-bottom: 2rem;
 }
+
+header {
+    .btn {
+        vertical-align: top;
+        min-width: 120px;
+        user-select: none;
+        -webkit-user-select: none;
+
+        &.dropdown {
+            position: relative;
+
+            .submenu {
+                position: absolute;
+                top: 100%;
+                left: -1px;
+                width: calc(100% + 2px);
+                overflow-y: hidden;
+                max-height: 0;
+                margin: 0;
+                padding: 0;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-bottom-left-radius: 0.3rem;
+                border-bottom-right-radius: 0.3rem;
+
+                li {
+                    list-style: none;
+                    
+                    &:not(:first-child) {
+                        border-top: 1px solid rgba(255, 255, 255, 0.3);
+                    }
+                }
+
+                a {
+                    color: rgba(255, 255, 255, 0.7);
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 5px;
+                    font-size: 14px;
+                }
+            }
+    
+            &:hover {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                .submenu {
+                    max-height: none;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-top: none;
+                }
+            }
+        }
+    }
+}

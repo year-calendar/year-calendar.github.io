@@ -1,0 +1,5 @@
+- name: 'Pure Javascript'
+  library: 'js-year-calendar'
+
+- name: 'React.js'
+  library: 'rc-year-calendar'
