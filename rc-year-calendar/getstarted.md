@@ -1,9 +1,21 @@
+# rc-year-calendar
+
+Official wrapper for the year-calendar widget. https://year-calendar.github.io/
+
+![alt tag](http://www.bootstrap-year-calendar.com/img/calendar.png)
+
 ## Installation
 You can get the widget using the following methods:
 - From the [GitHub repository](https://github.com/year-calendar/rc-year-calendar/releases)
 - From the Node package manager, using the following command: `npm install rc-year-calendar`
-- From the Node package manager, using the following command: `npm install rc-year-calendar`
-- From the CDN, by adding the following script directly in your HTML page: `<script src="https://unpkg.com/rc-year-calendar@latest/dist/year-calendar.js"></script>`
+- From Yarn, using the following command: `yarn add rc-year-calendar`
+- From the CDN, by adding the following script directly in your HTML page: 
+
+`<script src="https://unpkg.com/rc-year-calendar@latest/dist/rc-year-calendar.umd.min.js"></script>`
+
+AND
+
+`<link rel="stylesheet" type="text/css" href="https://unpkg.com/rc-year-calendar@latest/dist/rc-year-calendar.min.css" />`
 
 ## Usage
 
@@ -11,6 +23,7 @@ You can create a calendar using the following javascript code :
 ```
 // Import
 import Calendar from 'rc-year-calendar';
+import 'rc-year-calendar/dist/rc-year-calendar.css';
 
 // Render
 render() {
@@ -63,11 +76,11 @@ The props are the following
 | onDayContextMenu | Function fired when a day is right clicked. | `{ date, events }` |
 | onDayEnter | Function fired when the mouse enter on a day. | `{ date, events }` |
 | onDayLeave | Function fired when the mouse leaves a day. | `{ date, events }` |
-| renderEnd | Function fired when the calendar rendering is ended. | `{ currentYear }` |
+| onRenderEnd | Function fired when the calendar rendering is ended. | `{ currentYear }` |
 | onRangeSelected | Function fired when a date range is selected. | `{ startDate, endDate }` |
 | onYearChanged | Function fired when the visible year of the calendar is changed. | `{ currentYear }` |
 
 
 ## What next
 
-Check the [examples](/rc-year-calendar/examples) to discover all the functionalities
+Check the [examples](https://year-calendar.github.io/rc-year-calendar/examples) page to discover all the functionalities.

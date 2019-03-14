@@ -3,10 +3,10 @@ title: Examples
 layout: default
 filename: examples
 examples:
-  - name: Complete example
-    id: EMWBYQ
   - name: Basic example
     id: moWgbr
+  - name: Complete example
+    id: EMWBYQ
   - name: Events view
     id: gEmyrW
   - name: Asynchronous datasource
@@ -18,15 +18,15 @@ examples:
 
 {% for example in page.examples %}
     
-    <h3>{{ example.name }}</h3>
+  <h3>{{ example.name }}</h3>
 
-    <p class="codepen" data-height="600" data-theme-id="0" data-default-tab="result" data-user="Paul-DS" data-slug-hash="{{ example.id }}" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="{{ example.name }}">
-        <span>See the Pen <a href="https://codepen.io/Paul-DS/pen/{{ example.id }}/">
-        {{ example.name }}</a> by Paul (<a href="https://codepen.io/Paul-DS">@Paul-DS</a>)
-        on <a href="https://codepen.io">CodePen</a>.</span>
-    </p>
+  <p class="codepen" data-height="600" data-theme-id="0" data-default-tab="result" data-user="Paul-DS" data-slug-hash="{{ example.id }}" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="{{ example.name }}">
+    <span>See the Pen <a href="https://codepen.io/Paul-DS/pen/{{ example.id }}/">
+    {{ example.name }}</a> by Paul (<a href="https://codepen.io/Paul-DS">@Paul-DS</a>)
+    on <a href="https://codepen.io">CodePen</a>.</span>
+  </p>
 
-    <hr />
+  <hr />
 {% endfor %}
 
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
