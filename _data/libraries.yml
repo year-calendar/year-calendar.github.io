@@ -1,5 +1,7 @@
 - name: 'Pure Javascript'
   library: 'js-year-calendar'
+  has_documentation: true
 
 - name: 'React.js'
   library: 'rc-year-calendar'
+  has_documentation: false
