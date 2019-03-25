@@ -5,3 +5,7 @@
 - name: 'React.js'
   library: 'rc-year-calendar'
   has_documentation: false
+
+- name: 'Vue.js'
+  library: 'v-year-calendar'
+  has_documentation: false
