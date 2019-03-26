@@ -51,7 +51,14 @@
       </div>
       
       <a href="/license" class="btn">License</a>
-      <a href="https://github.com/year-calendar/" class="btn">View on GitHub</a>
+      <div class="btn dropdown">
+        View on GitHub
+        <ul class="submenu">
+          {% for library in site.data.libraries %}
+            <li><a href="https://github.com/year-calendar/{{ library.library }}/">{{ library.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </a>
     </header>
 
     {{ content }}
