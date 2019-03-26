@@ -11,4 +11,5 @@ Year calendar is a javascript widget that helps you create great calendars !
 
 
 The library is available for:
+
 {% for library in site.data.libraries %} [![{{ library.name }}]({{ library.icon }})](/{{ library.library }}/getstarted) {% endfor %}
