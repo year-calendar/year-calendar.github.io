@@ -1,9 +1,3 @@
-# rc-year-calendar
-
-Official wrapper for the year-calendar widget. https://year-calendar.github.io/
-
-![alt tag](http://www.bootstrap-year-calendar.com/img/calendar.png)
-
 ## Installation
 You can get the widget using the following methods:
 - From the [GitHub repository](https://github.com/year-calendar/rc-year-calendar/releases)
