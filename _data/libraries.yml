@@ -1,11 +1,14 @@
 - name: 'Pure Javascript'
   library: 'js-year-calendar'
+  icon: assets/img/js.png
   has_documentation: true
 
 - name: 'React.js'
   library: 'rc-year-calendar'
+  icon: assets/img/react.png
   has_documentation: false
 
 - name: 'Vue.js'
   library: 'v-year-calendar'
+  icon: assets/img/vue.png
   has_documentation: false
