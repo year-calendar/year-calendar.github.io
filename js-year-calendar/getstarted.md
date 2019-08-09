@@ -2,7 +2,7 @@
 You can get the widget using the following methods:
 - From the [GitHub repository](https://github.com/year-calendar/js-year-calendar/releases)
 - From the Node package manager, using the following command: `npm install js-year-calendar`
-- From the CDN, by adding the following script directly in your HTML page: `<script src="https://unpkg.com/js-year-calendar@latest/dist/year-calendar.js"></script>`
+- From the CDN, by adding the following script directly in your HTML page: `<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.js"></script>`
 
 ## Usage
 
