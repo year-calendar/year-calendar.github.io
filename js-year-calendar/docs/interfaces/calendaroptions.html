@@ -138,7 +138,7 @@
 					<div class="tsd-signature tsd-kind-icon">allow<wbr>Overlap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L16">interfaces/CalendarOptions.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L16">interfaces/CalendarOptions.ts:16</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -153,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">always<wbr>Half<wbr>Day<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L21">interfaces/CalendarOptions.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L21">interfaces/CalendarOptions.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -168,7 +168,7 @@
 					<div class="tsd-signature tsd-kind-icon">click<wbr>Day<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L133">interfaces/CalendarOptions.ts:133</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L140">interfaces/CalendarOptions.ts:140</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -204,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">context<wbr>Menu<wbr>Items<span class="tsd-signature-symbol">:</span> <a href="calendarcontextmenuitem.html" class="tsd-signature-type">CalendarContextMenuItem</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L26">interfaces/CalendarOptions.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L26">interfaces/CalendarOptions.ts:26</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -219,14 +219,15 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Data<wbr>Source<wbr>Renderer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L38">interfaces/CalendarOptions.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L44">interfaces/CalendarOptions.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Specify a custom renderer for data source. Works only with the style set to &quot;custom&quot;.
-							This function is called during render for each day containing at least one event.</p>
+							<p>Specify a custom renderer for data source. Works only with the style set to &quot;custom&quot;.</p>
 						</div>
+						<p>The HTML Element passed in parameter represent a sub element of the &quot;day&quot; div. If you need to access the &quot;day&quot; div, use <code>element.parentElement</code>.</p>
+						<p>This function is called during render for each day containing at least one event.</p>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -262,14 +263,15 @@
 					<div class="tsd-signature tsd-kind-icon">custom<wbr>Day<wbr>Renderer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L32">interfaces/CalendarOptions.ts:32</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L35">interfaces/CalendarOptions.ts:35</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Specify a custom renderer for days.
-							This function is called during render for each day.</p>
+							<p>Specify a custom renderer for days.</p>
 						</div>
+						<p>The HTML Element passed in parameter represent a sub element of the &quot;day&quot; div. If you need to access the &quot;day&quot; div, use <code>element.parentElement</code>.</p>
+						<p>This function is called during render for each day.</p>
 					</div>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
@@ -302,20 +304,20 @@
 					<div class="tsd-signature tsd-kind-icon">data<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L48">interfaces/CalendarOptions.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L55">interfaces/CalendarOptions.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>The elements that must be displayed on the calendar.
-							Could be:</p>
-							<ul>
-								<li>The datasource</li>
-								<li>A function that returns the datasource</li>
-								<li>An async function that will call the callback function with the datasource</li>
-								<li>An async function that returns a Promise to get the datasource</li>
-							</ul>
+							<p>The elements that must be displayed on the calendar.</p>
 						</div>
+						<p>Could be:</p>
+						<ul>
+							<li>The datasource</li>
+							<li>A function that returns the datasource</li>
+							<li>An async function that will call the callback function with the datasource</li>
+							<li>An async function that returns a Promise to get the datasource</li>
+						</ul>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
@@ -324,7 +326,7 @@
 					<div class="tsd-signature tsd-kind-icon">day<wbr>Context<wbr>Menu<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L138">interfaces/CalendarOptions.ts:138</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L145">interfaces/CalendarOptions.ts:145</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -360,7 +362,7 @@
 					<div class="tsd-signature tsd-kind-icon">disabled<wbr>Days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L53">interfaces/CalendarOptions.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L60">interfaces/CalendarOptions.ts:60</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -375,7 +377,7 @@
 					<div class="tsd-signature tsd-kind-icon">disabled<wbr>Week<wbr>Days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L58">interfaces/CalendarOptions.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L65">interfaces/CalendarOptions.ts:65</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -390,7 +392,7 @@
 					<div class="tsd-signature tsd-kind-icon">display<wbr>Disabled<wbr>Data<wbr>Source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L68">interfaces/CalendarOptions.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L75">interfaces/CalendarOptions.ts:75</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -405,7 +407,7 @@
 					<div class="tsd-signature tsd-kind-icon">display<wbr>Header<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L78">interfaces/CalendarOptions.ts:78</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L85">interfaces/CalendarOptions.ts:85</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -420,7 +422,7 @@
 					<div class="tsd-signature tsd-kind-icon">display<wbr>Week<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L73">interfaces/CalendarOptions.ts:73</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L80">interfaces/CalendarOptions.ts:80</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -435,7 +437,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Context<wbr>Menu<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L83">interfaces/CalendarOptions.ts:83</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L90">interfaces/CalendarOptions.ts:90</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -450,7 +452,7 @@
 					<div class="tsd-signature tsd-kind-icon">enable<wbr>Range<wbr>Selection<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L88">interfaces/CalendarOptions.ts:88</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L95">interfaces/CalendarOptions.ts:95</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -465,7 +467,7 @@
 					<div class="tsd-signature tsd-kind-icon">hidden<wbr>Week<wbr>Days<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L63">interfaces/CalendarOptions.ts:63</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L70">interfaces/CalendarOptions.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -480,7 +482,7 @@
 					<div class="tsd-signature tsd-kind-icon">language<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L93">interfaces/CalendarOptions.ts:93</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L100">interfaces/CalendarOptions.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -495,7 +497,7 @@
 					<div class="tsd-signature tsd-kind-icon">loading<wbr>Template<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L98">interfaces/CalendarOptions.ts:98</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L105">interfaces/CalendarOptions.ts:105</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -510,7 +512,7 @@
 					<div class="tsd-signature tsd-kind-icon">max<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L103">interfaces/CalendarOptions.ts:103</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L110">interfaces/CalendarOptions.ts:110</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -525,7 +527,7 @@
 					<div class="tsd-signature tsd-kind-icon">min<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L108">interfaces/CalendarOptions.ts:108</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L115">interfaces/CalendarOptions.ts:115</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -540,7 +542,7 @@
 					<div class="tsd-signature tsd-kind-icon">mouse<wbr>OnDay<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L143">interfaces/CalendarOptions.ts:143</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L150">interfaces/CalendarOptions.ts:150</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -576,7 +578,7 @@
 					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Out<wbr>Day<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L148">interfaces/CalendarOptions.ts:148</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L155">interfaces/CalendarOptions.ts:155</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -612,7 +614,7 @@
 					<div class="tsd-signature tsd-kind-icon">render<wbr>End<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L153">interfaces/CalendarOptions.ts:153</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L160">interfaces/CalendarOptions.ts:160</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -648,7 +650,7 @@
 					<div class="tsd-signature tsd-kind-icon">round<wbr>Range<wbr>Limits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L113">interfaces/CalendarOptions.ts:113</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L120">interfaces/CalendarOptions.ts:120</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -663,7 +665,7 @@
 					<div class="tsd-signature tsd-kind-icon">select<wbr>Range<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L158">interfaces/CalendarOptions.ts:158</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L165">interfaces/CalendarOptions.ts:165</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -699,7 +701,7 @@
 					<div class="tsd-signature tsd-kind-icon">start<wbr>Year<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L118">interfaces/CalendarOptions.ts:118</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L125">interfaces/CalendarOptions.ts:125</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -714,7 +716,7 @@
 					<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L123">interfaces/CalendarOptions.ts:123</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L130">interfaces/CalendarOptions.ts:130</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -729,7 +731,7 @@
 					<div class="tsd-signature tsd-kind-icon">week<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L128">interfaces/CalendarOptions.ts:128</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L135">interfaces/CalendarOptions.ts:135</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -744,7 +746,7 @@
 					<div class="tsd-signature tsd-kind-icon">year<wbr>Changed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/ba20661/src/ts/interfaces/CalendarOptions.ts#L163">interfaces/CalendarOptions.ts:163</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/interfaces/CalendarOptions.ts#L170">interfaces/CalendarOptions.ts:170</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">

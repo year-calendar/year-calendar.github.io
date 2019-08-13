@@ -66,9 +66,13 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="js-year-calendar">js-year-calendar</h1>
 				<p>A fully customizable year calendar widget</p>
-				<p><img src="http://www.bootstrap-year-calendar.com/img/calendar.png" alt="alt tag"></p>
+				<p><img src="https://year-calendar.github.io/assets/img/calendar.png" alt=""></p>
 				<p><a href="https://circleci.com/gh/year-calendar/js-year-calendar/tree/master"><img src="https://img.shields.io/circleci/project/github/year-calendar/js-year-calendar/master.svg" alt="CircleCI"></a>
-				<a href="https://codecov.io/gh/year-calendar/js-year-calendar"><img src="https://img.shields.io/codecov/c/github/year-calendar/js-year-calendar/master.svg" alt="CodeCov"></a></p>
+					<a href="https://codecov.io/gh/year-calendar/js-year-calendar"><img src="https://img.shields.io/codecov/c/github/year-calendar/js-year-calendar/master.svg" alt="CodeCov"></a>
+				<a href="https://www.npmjs.com/package/js-year-calendar"><img src="https://img.shields.io/npm/dw/js-year-calendar.svg" alt="NPM"></a></p>
+				<p>This library is also available for:</p>
+				<p><a href="https://github.com/year-calendar/rc-year-calendar"><img src="https://year-calendar.github.io/assets/img/react.png" alt="React.js"></a>
+				<a href="https://github.com/year-calendar/v-year-calendar"><img src="https://year-calendar.github.io/assets/img/vue.png" alt="Vue.js"></a></p>
 				<h2 id="requirements">Requirements</h2>
 				<p>This plugin uses pure javascript. No library is required.</p>
 				<h2 id="installation">Installation</h2>
@@ -76,9 +80,16 @@
 				<ul>
 					<li>From the <a href="https://github.com/year-calendar/js-year-calendar/releases">GitHub repository</a></li>
 					<li>From the Node package manager, using the following command: <code>npm install js-year-calendar</code></li>
-					<li>From the CDN, by adding the following script directly in your HTML page: <code>&lt;script src=&quot;https://unpkg.com/js-year-calendar@latest/dist/year-calendar.js&quot;&gt;&lt;/script&gt;</code></li>
+					<li>From Yarn, using the following command: <code>yarn add js-year-calendar</code></li>
+					<li>From the CDN, by adding the following script directly in your HTML page:</li>
 				</ul>
-				<h2 id="usage">Usage</h2>
+				<p><code>&lt;script src=&quot;https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.js&quot;&gt;&lt;/script&gt;</code></p>
+				<p>AND</p>
+				<p><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.min.css&quot; /&gt;</code></p>
+				<h2 id="initialization">Initialization</h2>
+				<p>If you&#39;re using javascript modules, don&#39;t forget to import the library:</p>
+				<pre><code><span class="hljs-keyword">import</span> Calendar <span class="hljs-keyword">from</span> <span class="hljs-string">'js-year-calendar'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'js-year-calendar/dist/js-year-calendar.css'</span>;</code></pre><h2 id="usage">Usage</h2>
 				<p>You can create a calendar using the following javascript code :</p>
 				<pre><code><span class="hljs-keyword">new</span> <span class="hljs-type">Calendar</span>(<span class="hljs-string">'.calendar'</span>)</code></pre><p>Or</p>
 				<pre><code><span class="hljs-keyword">new</span> <span class="hljs-constructor">Calendar(<span class="hljs-params">document</span>.<span class="hljs-params">querySelector</span>('.<span class="hljs-params">calendar</span>')</span>);</code></pre><p>Where <code>.calendar</code> is the selector of a <code>DIV</code> element that should contain your calendar.</p>
@@ -89,13 +100,22 @@
 				<pre><code><span class="hljs-keyword">new</span> Calendar(<span class="hljs-string">'.calendar'</span>, {
     <span class="hljs-attr">style</span>: <span class="hljs-string">'background'</span>,
     <span class="hljs-attr">minDate</span>: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()
-})</code></pre><p>You can find the exhaustive list of options in the <a href="/documentation">documentation</a>.</p>
+})</code></pre><p>You can find the exhaustive list of options in the <a href="https://year-calendar.github.io/js-year-calendar/documentation">documentation</a>.</p>
+				<h2 id="language">Language</h2>
+				<p>If you want to use the calendar in a different language, you should import the locale file corresponding to the language you want to use, and then set the <code>language</code> prop of the calendar:</p>
+				<pre><code><span class="hljs-keyword">import</span> Calendar <span class="hljs-keyword">from</span> <span class="hljs-string">'js-year-calendar'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'js-year-calendar/locales/js-year-calendar.fr'</span>;</code></pre><p>OR</p>
+				<pre><code><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.umd.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/js-year-calendar@latest/locales/js-year-calendar.fr.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre><p>Then</p>
+				<pre><code><span class="hljs-built_in">new</span> Calendar(<span class="hljs-string">'.calendar'</span>, {
+    <span class="hljs-keyword">language</span>: <span class="hljs-string">'fr'</span>
+})</code></pre><p>The list of available languages is available <a href="https://github.com/year-calendar/js-year-calendar/tree/master/locales">here</a></p>
 				<h2 id="updating-calendar">Updating calendar</h2>
 				<p>You can update the calendar after being instantiated:</p>
 				<pre><code>const calendar = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Calendar('.<span class="hljs-params">calendar</span>')</span>;
 
 calendar.set<span class="hljs-constructor">Style('<span class="hljs-params">background</span>')</span>;
-calendar.set<span class="hljs-constructor">MaxDate(<span class="hljs-params">new</span> Date()</span>);</code></pre><p>You can find the exhaustive list of methods in the <a href="/documentation">documentation</a>.</p>
+calendar.set<span class="hljs-constructor">MaxDate(<span class="hljs-params">new</span> Date()</span>);</code></pre><p>You can find the exhaustive list of methods in the <a href="https://year-calendar.github.io/js-year-calendar/documentation">documentation</a>.</p>
 				<h2 id="events">Events</h2>
 				<p>You can bind events to the calendar at initialization</p>
 				<pre><code><span class="hljs-keyword">const</span> calendar = <span class="hljs-keyword">new</span> Calendar(<span class="hljs-string">'.calendar'</span>, {
@@ -106,7 +126,7 @@ calendar.set<span class="hljs-constructor">MaxDate(<span class="hljs-params">new
 				<pre><code><span class="hljs-keyword">new</span> <span class="hljs-constructor">Calendar('.<span class="hljs-params">calendar</span>')</span>;
 document.query<span class="hljs-constructor">Selector('.<span class="hljs-params">calendar</span>')</span>.add<span class="hljs-constructor">EventListener('<span class="hljs-params">clickDay</span>', <span class="hljs-params">function</span>(<span class="hljs-params">e</span>)</span> {
     alert('Click on day ' + e.date.<span class="hljs-keyword">to</span><span class="hljs-constructor">String()</span>);
-});</code></pre><p>You can find the exhaustive list of events in the <a href="/documentation">documentation</a>.</p>
+});</code></pre><p>You can find the exhaustive list of events in the <a href="https://year-calendar.github.io/js-year-calendar/documentation">documentation</a>.</p>
 				<h2 id="migrating-from-bootstrap-year-calendar">Migrating from bootstrap-year-calendar</h2>
 				<p>This widget is based on the <a href="https://github.com/Paul-DS/bootstrap-year-calendar">bootstrap-year-calendar</a> widget.
 				If you were using this widget, these are the modifications to apply to successfully migrate your project:</p>
@@ -123,7 +143,8 @@ document.query<span class="hljs-constructor">Selector('.<span class="hljs-params
 
 <span class="hljs-params">...</span>
 
-calendar.<span class="hljs-built_in">set</span><span class="hljs-params">...</span>();</code></pre>
+calendar.<span class="hljs-built_in">set</span><span class="hljs-params">...</span>();</code></pre><h2 id="what-next">What next</h2>
+				<p>Check the <a href="https://year-calendar.github.io/js-year-calendar/documentation">documentation</a> and <a href="https://year-calendar.github.io/rc-year-calendar/examples">examples</a> pages to discover all the functionalities.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
