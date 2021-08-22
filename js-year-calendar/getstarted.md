@@ -37,6 +37,32 @@ new Calendar('.calendar', {
 
 You can find the exhaustive list of options in the [documentation](/documentation).
 
+## Language
+
+If you want to use the calendar in a different language, you should import the locale file corresponding to the language you want to use, and then set the `language` prop of the calendar:
+
+```
+import Calendar from 'js-year-calendar';
+import 'js-year-calendar/locales/js-year-calendar.fr';
+```
+
+OR
+
+```
+<script src="https://unpkg.com/js-year-calendar@latest/dist/js-year-calendar.umd.min.js"></script>
+<script src="https://unpkg.com/js-year-calendar@latest/locales/js-year-calendar.fr.js"></script>
+```
+
+Then
+
+```
+new Calendar('.calendar', {
+    language: 'fr'
+})
+```
+
+The list of available languages is available [here](https://github.com/year-calendar/js-year-calendar/tree/master/locales)
+
 ## Updating calendar
 
 You can update the calendar after being instantiated:
