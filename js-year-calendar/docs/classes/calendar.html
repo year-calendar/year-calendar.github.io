@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Calendar | js-year-calendar</title>
-	<meta name="description" content="">
+	<meta name="description" content="Documentation for js-year-calendar">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -13,7 +13,7 @@
 	<div class="tsd-page-toolbar">
 		<div class="container">
 			<div class="table-wrap">
-				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
 					<div class="field">
 						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
 						<input id="tsd-search-field" type="text" />
@@ -40,8 +40,6 @@
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
 							<input type="checkbox" id="tsd-filter-externals" checked />
 							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -106,6 +104,7 @@
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#daycontextmenu" class="tsd-kind-icon">day<wbr>Context<wbr>Menu</a></li>
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#mouseonday" class="tsd-kind-icon">mouse<wbr>OnDay</a></li>
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#mouseoutday" class="tsd-kind-icon">mouse<wbr>Out<wbr>Day</a></li>
+								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#periodchanged" class="tsd-kind-icon">period<wbr>Changed</a></li>
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#renderend" class="tsd-kind-icon">render<wbr>End</a></li>
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#selectrange" class="tsd-kind-icon">select<wbr>Range</a></li>
 								<li class="tsd-kind-event tsd-parent-kind-class"><a href="calendar.html#yearchanged" class="tsd-kind-icon">year<wbr>Changed</a></li>
@@ -118,6 +117,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getallowoverlap" class="tsd-kind-icon">get<wbr>Allow<wbr>Overlap</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getalwayshalfday" class="tsd-kind-icon">get<wbr>Always<wbr>Half<wbr>Day</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getcontextmenuitems" class="tsd-kind-icon">get<wbr>Context<wbr>Menu<wbr>Items</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getcurrentperiod" class="tsd-kind-icon">get<wbr>Current<wbr>Period</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getcustomdatasourcerenderer" class="tsd-kind-icon">get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getcustomdayrenderer" class="tsd-kind-icon">get<wbr>Custom<wbr>Day<wbr>Renderer</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getdatasource" class="tsd-kind-icon">get<wbr>Data<wbr>Source</a></li>
@@ -135,7 +135,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getloadingtemplate" class="tsd-kind-icon">get<wbr>Loading<wbr>Template</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getmaxdate" class="tsd-kind-icon">get<wbr>Max<wbr>Date</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getmindate" class="tsd-kind-icon">get<wbr>Min<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getnumbermonthsdisplayed" class="tsd-kind-icon">get<wbr>Number<wbr>Months<wbr>Displayed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getroundrangelimits" class="tsd-kind-icon">get<wbr>Round<wbr>Range<wbr>Limits</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getstartdate" class="tsd-kind-icon">get<wbr>Start<wbr>Date</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getstyle" class="tsd-kind-icon">get<wbr>Style</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getweeknumber" class="tsd-kind-icon">get<wbr>Week<wbr>Number</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#getweekstart" class="tsd-kind-icon">get<wbr>Week<wbr>Start</a></li>
@@ -160,7 +162,9 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setloadingtemplate" class="tsd-kind-icon">set<wbr>Loading<wbr>Template</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setmaxdate" class="tsd-kind-icon">set<wbr>Max<wbr>Date</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setmindate" class="tsd-kind-icon">set<wbr>Min<wbr>Date</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setnumbermonthsdisplayed" class="tsd-kind-icon">set<wbr>Number<wbr>Months<wbr>Displayed</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setroundrangelimits" class="tsd-kind-icon">set<wbr>Round<wbr>Range<wbr>Limits</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setstartdate" class="tsd-kind-icon">set<wbr>Start<wbr>Date</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setstyle" class="tsd-kind-icon">set<wbr>Style</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setweekstart" class="tsd-kind-icon">set<wbr>Week<wbr>Start</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="calendar.html#setyear" class="tsd-kind-icon">set<wbr>Year</a></li>
@@ -181,7 +185,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L174">js-year-calendar.ts:174</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L190">js-year-calendar.ts:190</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -200,7 +204,7 @@
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/calendaroptions.html" class="tsd-signature-type">CalendarOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> options: <a href="../interfaces/calendaroptions.html" class="tsd-signature-type">CalendarOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = null</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<div class="lead">
 											<p>The options used to customize the calendar</p>
@@ -221,7 +225,7 @@
 					<div class="tsd-signature tsd-kind-icon">click<wbr>Day<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendardayeventobject.html" class="tsd-signature-type">CalendarDayEventObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L94">js-year-calendar.ts:94</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L96">js-year-calendar.ts:96</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -231,9 +235,11 @@
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'clickDay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Click on day: "</span> + e.date + <span class="hljs-string">" ("</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">" events)"</span>);
-})</code></pre></dd>
+document.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;clickDay&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Click on day: &quot;</span> + e.date + <span class="hljs-string">&quot; (&quot;</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">&quot; events)&quot;</span>);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -243,7 +249,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">day<wbr>Context<wbr>Menu<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendardayeventobject.html" class="tsd-signature-type">CalendarDayEventObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L107">js-year-calendar.ts:107</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L109">js-year-calendar.ts:109</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -253,9 +259,11 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'clickDay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Right click on day: "</span> + e.date + <span class="hljs-string">" ("</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">" events)"</span>);
-})</code></pre></dd>
+document.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;clickDay&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Right click on day: &quot;</span> + e.date + <span class="hljs-string">&quot; (&quot;</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">&quot; events)&quot;</span>);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -265,7 +273,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">mouse<wbr>OnDay<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendardayeventobject.html" class="tsd-signature-type">CalendarDayEventObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L120">js-year-calendar.ts:120</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L122">js-year-calendar.ts:122</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -275,9 +283,11 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'mouseOnDay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Mouse enter in a day: "</span> + e.date + <span class="hljs-string">" ("</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">" events)"</span>);
-})</code></pre></dd>
+document.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;mouseOnDay&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Mouse enter in a day: &quot;</span> + e.date + <span class="hljs-string">&quot; (&quot;</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">&quot; events)&quot;</span>);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -287,7 +297,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">mouse<wbr>Out<wbr>Day<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendardayeventobject.html" class="tsd-signature-type">CalendarDayEventObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L133">js-year-calendar.ts:133</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L135">js-year-calendar.ts:135</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -297,9 +307,35 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'mouseOutDay'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
-  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">"Mouse leave a day: "</span> + e.date + <span class="hljs-string">" ("</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">" events)"</span>);
-})</code></pre></dd>
+document.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;mouseOutDay&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(e)</span> {</span>
+  console.<span class="hljs-built_in">log</span>(<span class="hljs-string">&quot;Mouse leave a day: &quot;</span> + e.date + <span class="hljs-string">&quot; (&quot;</span> + e.<span class="hljs-keyword">events</span>.<span class="hljs-built_in">length</span> + <span class="hljs-string">&quot; events)&quot;</span>);
+})
+</code></pre>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-event tsd-parent-kind-class">
+					<a name="periodchanged" class="tsd-anchor"></a>
+					<h3>period<wbr>Changed</h3>
+					<div class="tsd-signature tsd-kind-icon">period<wbr>Changed<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendarperiodchangedeventobject.html" class="tsd-signature-type">CalendarPeriodChangedEventObject</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L190">js-year-calendar.ts:190</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Triggered after the changing the visible period.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>example</dt>
+							<dd><pre><code>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;periodChanged&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`New period selected: <span class="hljs-subst">${e.startDate}</span> <span class="hljs-subst">${e.endDate}</span>`</span>);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -309,7 +345,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">render<wbr>End<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendarrenderendeventobject.html" class="tsd-signature-type">CalendarRenderEndEventObject</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L146">js-year-calendar.ts:146</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L148">js-year-calendar.ts:148</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -319,9 +355,11 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'renderEnd'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Render end for year: "</span> + e.currentYear);
-})</code></pre></dd>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;renderEnd&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Render end for year: &quot;</span> + e.currentYear);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -331,7 +369,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">select<wbr>Range<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendarrangeeventobject.html" class="tsd-signature-type">CalendarRangeEventObject</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L161">js-year-calendar.ts:161</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L163">js-year-calendar.ts:163</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -342,9 +380,11 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'selectRange'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Select the range: "</span> + e.startDate + <span class="hljs-string">" - "</span> + e.endDate);
-})</code></pre></dd>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;selectRange&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;Select the range: &quot;</span> + e.startDate + <span class="hljs-string">&quot; - &quot;</span> + e.endDate);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -354,19 +394,22 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<div class="tsd-signature tsd-kind-icon">year<wbr>Changed<span class="tsd-signature-symbol">:</span> <a href="../interfaces/calendaryearchangedeventobject.html" class="tsd-signature-type">CalendarYearChangedEventObject</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L174">js-year-calendar.ts:174</a></li>
+							<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L177">js-year-calendar.ts:177</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>Triggered after the changing the current year.</p>
+							<p>Triggered after the changing the current year.
+							Works only if the calendar is used in a full year mode. Otherwise, use <code>periodChanged</code> event.</p>
 						</div>
 						<dl class="tsd-comment-tags">
 							<dt>example</dt>
 							<dd><pre><code>
-<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">'.calendar'</span>).addEventListener(<span class="hljs-string">'yearChanged'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"New year selected: "</span> + e.currentYear);
-})</code></pre></dd>
+<span class="hljs-built_in">document</span>.querySelector(<span class="hljs-string">&#x27;.calendar&#x27;</span>).addEventListener(<span class="hljs-string">&#x27;yearChanged&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;New year selected: &quot;</span> + e.currentYear);
+})
+</code></pre>
+							</dd>
 						</dl>
 					</div>
 				</section>
@@ -383,7 +426,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1770">js-year-calendar.ts:1770</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1955">js-year-calendar.ts:1955</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -398,7 +441,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<h5>evt: <span class="tsd-signature-type">T</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Indicates whether the calendar shouldn&#39;t be refreshed once the event added.</p>
 									</div>
@@ -418,7 +461,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1349">js-year-calendar.ts:1349</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1534">js-year-calendar.ts:1534</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -440,7 +483,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1434">js-year-calendar.ts:1434</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1619">js-year-calendar.ts:1619</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -462,7 +505,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1595">js-year-calendar.ts:1595</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1780">js-year-calendar.ts:1780</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -475,16 +518,46 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getcustomdatasourcerenderer" class="tsd-anchor"></a>
-					<h3>get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer</h3>
+					<a name="getcurrentperiod" class="tsd-anchor"></a>
+					<h3>get<wbr>Current<wbr>Period</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Current<wbr>Period<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>endDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> }</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1641">js-year-calendar.ts:1641</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1351">js-year-calendar.ts:1351</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the period displayed on the calendar.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span>endDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol"> }</span></h4>
+							<ul class="tsd-parameters">
+								<li class="tsd-parameter">
+									<h5>end<wbr>Date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+								</li>
+								<li class="tsd-parameter">
+									<h5>start<wbr>Date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></h5>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcustomdatasourcerenderer" class="tsd-anchor"></a>
+					<h3>get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1826">js-year-calendar.ts:1826</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -492,10 +565,10 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<p>Gets the custom data source renderer.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h4>
 							<ul class="tsd-parameters">
-								<li class="tsd-parameter-siganture">
-									<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
 										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 									</ul>
 									<ul class="tsd-descriptions">
@@ -524,13 +597,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="getcustomdayrenderer" class="tsd-anchor"></a>
 					<h3>get<wbr>Custom<wbr>Day<wbr>Renderer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Custom<wbr>Day<wbr>Renderer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Custom<wbr>Day<wbr>Renderer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1618">js-year-calendar.ts:1618</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1803">js-year-calendar.ts:1803</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -538,10 +611,10 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<p>Gets the custom day renderer.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">function</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h4>
 							<ul class="tsd-parameters">
-								<li class="tsd-parameter-siganture">
-									<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+								<li class="tsd-parameter-signature">
+									<ul class="tsd-signatures tsd-kind-type-literal">
 										<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 									</ul>
 									<ul class="tsd-descriptions">
@@ -567,13 +640,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="getdatasource" class="tsd-anchor"></a>
 					<h3>get<wbr>Data<wbr>Source</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, done<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1689">js-year-calendar.ts:1689</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1874">js-year-calendar.ts:1874</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -581,12 +654,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<p>Gets the current data source.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">function</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">function</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, done<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -600,7 +668,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1480">js-year-calendar.ts:1480</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1665">js-year-calendar.ts:1665</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -622,7 +690,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1503">js-year-calendar.ts:1503</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1688">js-year-calendar.ts:1688</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -644,7 +712,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1411">js-year-calendar.ts:1411</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1596">js-year-calendar.ts:1596</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -666,7 +734,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1388">js-year-calendar.ts:1388</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1573">js-year-calendar.ts:1573</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -688,7 +756,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1365">js-year-calendar.ts:1365</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1550">js-year-calendar.ts:1550</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -710,7 +778,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1572">js-year-calendar.ts:1572</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1757">js-year-calendar.ts:1757</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -732,7 +800,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1457">js-year-calendar.ts:1457</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1642">js-year-calendar.ts:1642</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -754,7 +822,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1182">js-year-calendar.ts:1182</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1302">js-year-calendar.ts:1302</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -785,7 +853,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1192">js-year-calendar.ts:1192</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1312">js-year-calendar.ts:1312</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -822,7 +890,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1526">js-year-calendar.ts:1526</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1711">js-year-calendar.ts:1711</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -844,7 +912,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1664">js-year-calendar.ts:1664</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1849">js-year-calendar.ts:1849</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -866,7 +934,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1748">js-year-calendar.ts:1748</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1933">js-year-calendar.ts:1933</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -874,10 +942,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<p>Gets the loading template.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span>
-								<span class="tsd-signature-symbol"> | </span>
-								<span class="tsd-signature-type">HTMLElement</span>
-							</h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLElement</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -891,7 +956,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1301">js-year-calendar.ts:1301</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1486">js-year-calendar.ts:1486</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -913,7 +978,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1276">js-year-calendar.ts:1276</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1461">js-year-calendar.ts:1461</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -922,6 +987,28 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getnumbermonthsdisplayed" class="tsd-anchor"></a>
+					<h3>get<wbr>Number<wbr>Months<wbr>Displayed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Number<wbr>Months<wbr>Displayed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1435">js-year-calendar.ts:1435</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the number of months displayed by the calendar.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -935,7 +1022,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1549">js-year-calendar.ts:1549</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1734">js-year-calendar.ts:1734</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -944,6 +1031,28 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 								</div>
 							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getstartdate" class="tsd-anchor"></a>
+					<h3>get<wbr>Start<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Start<wbr>Date<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1384">js-year-calendar.ts:1384</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the first date displayed on the calendar.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -957,7 +1066,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1326">js-year-calendar.ts:1326</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1511">js-year-calendar.ts:1511</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -979,7 +1088,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1164">js-year-calendar.ts:1164</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1284">js-year-calendar.ts:1284</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1010,7 +1119,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1725">js-year-calendar.ts:1725</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1910">js-year-calendar.ts:1910</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1026,21 +1135,22 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="getyear" class="tsd-anchor"></a>
 					<h3>get<wbr>Year</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Year<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Year<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1231">js-year-calendar.ts:1231</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1364">js-year-calendar.ts:1364</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Gets the year displayed on the calendar.</p>
+									<p>Gets the year displayed on the calendar.
+									If the calendar is not used in a full year configuration, this will return the year of the first date displayed in the calendar.</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -1054,7 +1164,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1214">js-year-calendar.ts:1214</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1334">js-year-calendar.ts:1334</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1071,7 +1181,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> after: <span class="tsd-signature-type">Boolean</span><span class="tsd-signature-symbol"> =&nbsp;null</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> after: <span class="tsd-signature-type">Boolean</span><span class="tsd-signature-symbol"> = null</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>Whether to check for a free slot on the first part (if <code>false</code>) or the last part (if <code>true</code>) of the day. If <code>null</code>, this will check on the whole day.</p>
 										<p>Usefull only if using the <code>alwaysHalfDay</code> option of the calendar, or the <code>startHalfDay</code> or <code>endHalfDay</code> option of the datasource.</p>
@@ -1092,7 +1202,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L285">js-year-calendar.ts:285</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L322">js-year-calendar.ts:322</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1103,7 +1213,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> isLoading: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> isLoading: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1120,7 +1230,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1358">js-year-calendar.ts:1358</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1543">js-year-calendar.ts:1543</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1151,7 +1261,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1446">js-year-calendar.ts:1446</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1631">js-year-calendar.ts:1631</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1169,7 +1279,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1186,7 +1296,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1607">js-year-calendar.ts:1607</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1792">js-year-calendar.ts:1792</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1204,7 +1314,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1215,13 +1325,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="setcustomdatasourcerenderer" class="tsd-anchor"></a>
 					<h3>set<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer<span class="tsd-signature-symbol">(</span>customDataSourceRenderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer<span class="tsd-signature-symbol">(</span>customDataSourceRenderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1653">js-year-calendar.ts:1653</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1838">js-year-calendar.ts:1838</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1233,10 +1343,10 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>customDataSourceRenderer: <span class="tsd-signature-type">function</span></h5>
+									<h5>customDataSourceRenderer: <span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
 									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span>, events<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -1260,7 +1370,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1271,13 +1381,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="setcustomdayrenderer" class="tsd-anchor"></a>
 					<h3>set<wbr>Custom<wbr>Day<wbr>Renderer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Custom<wbr>Day<wbr>Renderer<span class="tsd-signature-symbol">(</span>customDayRenderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Custom<wbr>Day<wbr>Renderer<span class="tsd-signature-symbol">(</span>customDayRenderer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1630">js-year-calendar.ts:1630</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1815">js-year-calendar.ts:1815</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1289,10 +1399,10 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>customDayRenderer: <span class="tsd-signature-type">function</span></h5>
+									<h5>customDayRenderer: <span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
 									<ul class="tsd-parameters">
-										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>element<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLElement</span>, currentDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -1313,7 +1423,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</ul>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1324,13 +1434,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					<a name="setdatasource" class="tsd-anchor"></a>
 					<h3>set<wbr>Data<wbr>Source</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Data<wbr>Source<span class="tsd-signature-symbol">(</span>dataSource<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, done<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1701">js-year-calendar.ts:1701</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1886">js-year-calendar.ts:1886</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1342,13 +1452,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>dataSource: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></h5>
+									<h5>dataSource: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>currentYear<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, done<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>The new data source.</p>
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1365,7 +1475,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1492">js-year-calendar.ts:1492</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1677">js-year-calendar.ts:1677</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1380,7 +1490,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<h5>disabledDays: <span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1397,7 +1507,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1515">js-year-calendar.ts:1515</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1700">js-year-calendar.ts:1700</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1415,7 +1525,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1432,7 +1542,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1423">js-year-calendar.ts:1423</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1608">js-year-calendar.ts:1608</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1450,7 +1560,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1467,7 +1577,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1400">js-year-calendar.ts:1400</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1585">js-year-calendar.ts:1585</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1485,7 +1595,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1502,7 +1612,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1377">js-year-calendar.ts:1377</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1562">js-year-calendar.ts:1562</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1520,7 +1630,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1537,7 +1647,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1584">js-year-calendar.ts:1584</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1769">js-year-calendar.ts:1769</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1555,7 +1665,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1572,7 +1682,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1469">js-year-calendar.ts:1469</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1654">js-year-calendar.ts:1654</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1590,7 +1700,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1607,7 +1717,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1538">js-year-calendar.ts:1538</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1723">js-year-calendar.ts:1723</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1625,7 +1735,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1642,7 +1752,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1676">js-year-calendar.ts:1676</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1861">js-year-calendar.ts:1861</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1660,7 +1770,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1677,7 +1787,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1757">js-year-calendar.ts:1757</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1942">js-year-calendar.ts:1942</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1708,7 +1818,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1313">js-year-calendar.ts:1313</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1498">js-year-calendar.ts:1498</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1723,7 +1833,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<h5>date: <span class="tsd-signature-type">Date</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1740,7 +1850,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1288">js-year-calendar.ts:1288</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1473">js-year-calendar.ts:1473</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1755,7 +1865,42 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									<h5>date: <span class="tsd-signature-type">Date</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setnumbermonthsdisplayed" class="tsd-anchor"></a>
+					<h3>set<wbr>Number<wbr>Months<wbr>Displayed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Number<wbr>Months<wbr>Displayed<span class="tsd-signature-symbol">(</span>numberMonthsDisplayed<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span>, preventRendering<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1447">js-year-calendar.ts:1447</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the number of months displayed that should be displayed by the calendar.</p>
+								</div>
+								<p>This method causes a refresh of the calendar.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>numberMonthsDisplayed: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Number of months that should be displayed by the calendar.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1772,7 +1917,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1561">js-year-calendar.ts:1561</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1746">js-year-calendar.ts:1746</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1790,7 +1935,38 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setstartdate" class="tsd-anchor"></a>
+					<h3>set<wbr>Start<wbr>Date</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Start<wbr>Date<span class="tsd-signature-symbol">(</span>startDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1393">js-year-calendar.ts:1393</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the first date that should be displayed on the calendar.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>startDate: <span class="tsd-signature-type">Date</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The first date that should be displayed on the calendar.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1807,7 +1983,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1338">js-year-calendar.ts:1338</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1523">js-year-calendar.ts:1523</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1825,7 +2001,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1842,7 +2018,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1737">js-year-calendar.ts:1737</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1922">js-year-calendar.ts:1922</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1860,7 +2036,7 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 									</div>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;false</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> preventRendering: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1877,12 +2053,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/425eda1/src/ts/js-year-calendar.ts#L1240">js-year-calendar.ts:1240</a></li>
+									<li>Defined in <a href="https://github.com/year-calendar/js-year-calendar/blob/63832a4/src/ts/js-year-calendar.ts#L1374">js-year-calendar.ts:1374</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Sets the year displayed on the calendar.</p>
+									<p>Sets the year displayed on the calendar.
+									If the calendar is not used in a full year configuration, this will set the start date to January 1st of the given year.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1931,6 +2108,9 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 								<a href="calendar.html#mouseoutday" class="tsd-kind-icon">mouse<wbr>Out<wbr>Day</a>
 							</li>
 							<li class=" tsd-kind-event tsd-parent-kind-class">
+								<a href="calendar.html#periodchanged" class="tsd-kind-icon">period<wbr>Changed</a>
+							</li>
+							<li class=" tsd-kind-event tsd-parent-kind-class">
 								<a href="calendar.html#renderend" class="tsd-kind-icon">render<wbr>End</a>
 							</li>
 							<li class=" tsd-kind-event tsd-parent-kind-class">
@@ -1950,6 +2130,9 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#getcontextmenuitems" class="tsd-kind-icon">get<wbr>Context<wbr>Menu<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="calendar.html#getcurrentperiod" class="tsd-kind-icon">get<wbr>Current<wbr>Period</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#getcustomdatasourcerenderer" class="tsd-kind-icon">get<wbr>Custom<wbr>Data<wbr>Source<wbr>Renderer</a>
@@ -2003,7 +2186,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 								<a href="calendar.html#getmindate" class="tsd-kind-icon">get<wbr>Min<wbr>Date</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="calendar.html#getnumbermonthsdisplayed" class="tsd-kind-icon">get<wbr>Number<wbr>Months<wbr>Displayed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#getroundrangelimits" class="tsd-kind-icon">get<wbr>Round<wbr>Range<wbr>Limits</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="calendar.html#getstartdate" class="tsd-kind-icon">get<wbr>Start<wbr>Date</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#getstyle" class="tsd-kind-icon">get<wbr>Style</a>
@@ -2078,7 +2267,13 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 								<a href="calendar.html#setmindate" class="tsd-kind-icon">set<wbr>Min<wbr>Date</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="calendar.html#setnumbermonthsdisplayed" class="tsd-kind-icon">set<wbr>Number<wbr>Months<wbr>Displayed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#setroundrangelimits" class="tsd-kind-icon">set<wbr>Round<wbr>Range<wbr>Limits</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="calendar.html#setstartdate" class="tsd-kind-icon">set<wbr>Start<wbr>Date</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="calendar.html#setstyle" class="tsd-kind-icon">set<wbr>Style</a>
@@ -2093,25 +2288,28 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/calendarcontextmenuitem.html" class="tsd-kind-icon">Calendar<wbr>Context<wbr>Menu<wbr>Item</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/calendardatasourceelement.html" class="tsd-kind-icon">Calendar<wbr>Data<wbr>Source<wbr>Element</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/calendardayeventobject.html" class="tsd-kind-icon">Calendar<wbr>Day<wbr>Event<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter tsd-is-external">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="../interfaces/calendaroptions.html" class="tsd-kind-icon">Calendar<wbr>Options</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface">
+						<a href="../interfaces/calendarperiodchangedeventobject.html" class="tsd-kind-icon">Calendar<wbr>Period<wbr>Changed<wbr>Event<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/calendarrangeeventobject.html" class="tsd-kind-icon">Calendar<wbr>Range<wbr>Event<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/calendarrenderendeventobject.html" class="tsd-kind-icon">Calendar<wbr>Render<wbr>End<wbr>Event<wbr>Object</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
+					<li class=" tsd-kind-interface">
 						<a href="../interfaces/calendaryearchangedeventobject.html" class="tsd-kind-icon">Calendar<wbr>Year<wbr>Changed<wbr>Event<wbr>Object</a>
 					</li>
 				</ul>
@@ -2124,65 +2322,19 @@ document.querySelector(<span class="hljs-string">'.calendar'</span>).addEventLis
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
-				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
-				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
-				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
-				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
-				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
-				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 		</div>
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
