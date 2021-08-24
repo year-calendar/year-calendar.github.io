@@ -35,7 +35,7 @@ new Calendar('.calendar', {
 })
 ```
 
-You can find the exhaustive list of options in the [documentation](/documentation).
+You can find the exhaustive list of options in the [documentation](documentation).
 
 ## Language
 
@@ -73,7 +73,7 @@ calendar.setStyle('background');
 calendar.setMaxDate(new Date());
 ```
 
-You can find the exhaustive list of methods in the [documentation](/documentation).
+You can find the exhaustive list of methods in the [documentation](documentation).
 
 ## Events
 
@@ -95,7 +95,7 @@ document.querySelector('.calendar').addEventListener('clickDay', function(e) {
 });
 ```
 
-You can find the exhaustive list of events in the [documentation](/documentation).
+You can find the exhaustive list of events in the [documentation](documentation).
 
 ## Migrating from bootstrap-year-calendar
 
